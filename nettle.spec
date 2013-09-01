@@ -1,11 +1,11 @@
 Summary:	Nettle - a cryptographic library
 Name:		nettle
-Version:	2.6
+Version:	2.7.1
 Release:	1
 License:	GPL v2+ (parts on LGPL v2.1+)
 Group:		Libraries
-Source0:	ftp://ftp.lysator.liu.se/pub/security/lsh/%{name}-%{version}.tar.gz
-# Source0-md5:	02f76b668855c4da67186c04cd3a222f
+Source0:	http://ftp.gnu.org/gnu/nettle/%{name}-%{version}.tar.gz
+# Source0-md5:	003d5147911317931dd453520eb234a5
 URL:		http://www.lysator.liu.se/~nisse/lsh/
 BuildRequires:	autoconf
 BuildRequires:	automake
