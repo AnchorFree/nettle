@@ -1,7 +1,8 @@
+# based on PLD Linux spec git://git.pld-linux.org/packages/nettle.git
 Summary:	Nettle - a cryptographic library
 Name:		nettle
 Version:	2.7.1
-Release:	2
+Release:	3
 License:	GPL v2+ (parts on LGPL v2.1+)
 Group:		Libraries
 Source0:	http://ftp.gnu.org/gnu/nettle/%{name}-%{version}.tar.gz
