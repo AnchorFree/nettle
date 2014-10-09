@@ -1,12 +1,13 @@
 # based on PLD Linux spec git://git.pld-linux.org/packages/nettle.git
-Summary:	Nettle - a cryptographic library
+Summary:	Low-level cryptographic library
 Name:		nettle
-Version:	3.0
+Version:	2.7.1
 Release:	1
+Epoch:		1
 License:	GPL v2+ (parts on LGPL v2.1+)
 Group:		Libraries
 Source0:	http://ftp.gnu.org/gnu/nettle/%{name}-%{version}.tar.gz
-# Source0-md5:	f64b1bf1e774b7ae6e507318e340250e
+# Source0-md5:	003d5147911317931dd453520eb234a5
 URL:		http://www.lysator.liu.se/~nisse/lsh/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -33,7 +34,7 @@ application.
 %package devel
 Summary:	Header files for nettle library
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 Header files for nettle library.
@@ -74,7 +75,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/nettle-hash
 %attr(755,root,root) %{_bindir}/nettle-lfib-stream
-%attr(755,root,root) %{_bindir}/nettle-pbkdf2
 %attr(755,root,root) %{_bindir}/pkcs1-conv
 %attr(755,root,root) %{_bindir}/sexp-conv
 
