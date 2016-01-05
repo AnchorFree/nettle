@@ -3,7 +3,6 @@ Summary:  Low-level cryptographic library
 Name:     nettle
 Version:  2.7.1
 Release:  1
-Epoch:    1
 License:  GPL v2+ (parts on LGPL v2.1+)
 Group:    Libraries
 Source0:  http://ftp.gnu.org/gnu/nettle/%{name}-%{version}.tar.gz
@@ -34,7 +33,7 @@ application.
 %package devel
 Summary:  Header files for nettle library
 Group:    Development/Libraries
-Requires: %{name} = %{epoch}:%{version}-%{release}
+Requires: %{name} = %{version}-%{release}
 
 %description devel
 Header files for nettle library.
