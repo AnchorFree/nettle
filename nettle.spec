@@ -1,7 +1,7 @@
 # based on PLD Linux spec git://git.pld-linux.org/packages/nettle.git
 Summary:  Low-level cryptographic library
 Name:     libnettle
-Version:  2.7.1
+Version:  3.1.1
 Release:  1
 License:  GPL v2+ (parts on LGPL v2.1+)
 Group:    Libraries
