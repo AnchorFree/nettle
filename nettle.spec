@@ -1,25 +1,25 @@
 # based on PLD Linux spec git://git.pld-linux.org/packages/nettle.git
-Summary:	Low-level cryptographic library
-Name:		nettle
-Version:	2.7.1
-Release:	1
-Epoch:		1
-License:	GPL v2+ (parts on LGPL v2.1+)
-Group:		Libraries
-Source0:	http://ftp.gnu.org/gnu/nettle/%{name}-%{version}.tar.gz
-# Source0-md5:	003d5147911317931dd453520eb234a5
-URL:		http://www.lysator.liu.se/~nisse/lsh/
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	gmp-devel
-BuildRequires:	libtool
-BuildRequires:	m4
+Summary:  Low-level cryptographic library
+Name:     nettle
+Version:  2.7.1
+Release:  1
+Epoch:    1
+License:  GPL v2+ (parts on LGPL v2.1+)
+Group:    Libraries
+Source0:  http://ftp.gnu.org/gnu/nettle/%{name}-%{version}.tar.gz
+# Source0-md5:  003d5147911317931dd453520eb234a5
+URL:      http://www.lysator.liu.se/~nisse/lsh/
+BuildRequires:  autoconf
+BuildRequires:  automake
+BuildRequires:  gmp-devel
+BuildRequires:  libtool
+BuildRequires:  m4
 %if 0
-BuildRequires:	ghostscript
-BuildRequires:	tetex-dvips
-BuildRequires:	texinfo-texi2dvi
+BuildRequires:  ghostscript
+BuildRequires:  tetex-dvips
+BuildRequires:  texinfo-texi2dvi
 %endif
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Nettle is a cryptographic library that is designed to fit easily in
@@ -32,9 +32,9 @@ memory allocation. It doesn't do any I/O. All these is up to
 application.
 
 %package devel
-Summary:	Header files for nettle library
-Group:		Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}-%{release}
+Summary:  Header files for nettle library
+Group:    Development/Libraries
+Requires: %{name} = %{epoch}:%{version}-%{release}
 
 %description devel
 Header files for nettle library.
@@ -47,27 +47,27 @@ Header files for nettle library.
 %{__aclocal}
 %{__autoconf}
 %configure \
-	--enable-shared
+  --enable-shared
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+  DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_infodir}/dir
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p /usr/sbin/ldconfig
-%postun	-p /usr/sbin/ldconfig
+%post -p /usr/sbin/ldconfig
+%postun -p /usr/sbin/ldconfig
 
-%post	devel -p /sbin/postshell
+%post  devel -p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun	devel -p /sbin/postshell
+%postun  devel -p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files
